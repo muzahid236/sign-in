@@ -1,0 +1,15 @@
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+  $name  = $_REQUEST['username'];
+  if(empty($name)){
+  echo "<span style ='color : red'> Username field must not be empty !!</span";
+}
+else{
+  echo "<span style ='color : green'> You have successfully submitted: <span style = 'color:blue'> ".$name." </span></span";
+
+}
+}
+
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+  Username:<input type="text"name="username"/>
+  <input type="submit" value="Submit">
+</form>
